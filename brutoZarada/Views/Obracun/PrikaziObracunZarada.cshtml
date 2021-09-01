@@ -1,0 +1,84 @@
+﻿@model List<brutoZarada.Models.RadnikIZarada>
+
+@{
+    ViewBag.Title = "PrikaziObracunZarada";
+
+}
+
+
+    @foreach (var element in Model)
+    {
+<table>
+    <tr>
+        <th>@Html.LabelFor(m => element.Ime, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+        <td>@Html.DisplayFor(m => element.Ime, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>@Html.LabelFor(m => element.Prezime, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+        <td>@Html.DisplayFor(m => element.Prezime, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>@Html.LabelFor(m => element.Adresa, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+        <td>@Html.DisplayFor(m => element.Adresa, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>@Html.LabelFor(m => element.Neto, htmlAttributes: new { @class = "control-label col-md-2" })</th>
+        <td>@Html.DisplayFor(m => element.Neto, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Bruto 1</th>
+        <td>@Html.DisplayFor(m => element.Bruto1, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Porez na dohodak</th>
+        <td>@Html.DisplayFor(m => element.Porez_na_dohodak, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos za pio na teret zaposlenog</th>
+        <td>@Html.DisplayFor(m => element.Doprinos_pio_zaposleni, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos za zdravstvo na teret zaposlenog</th>
+        <td>@Html.DisplayFor(m => element.Doprinos_zdravstvo_zaposleni, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos za nezaposlenost na teret zaposlenog</th>
+        <td>@Html.DisplayFor(m => element.Doprinos_nezaposlenost_zaposleni, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Ukupan doprinos na teret zaposlenog</th>
+        <td>@Html.DisplayFor(m => element.Ukupan_doprinos_zaposleni, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos na pio na teret poslodavca</th>
+        <td>@Html.DisplayFor(m => element.Doprinos_pio_poslodavac, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos za zdravstvo na teret poslodavca </th>
+        <td>@Html.DisplayFor(m => element.Doprinos_zdravstvo_poslodavac, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Doprinos za nezaposlenost na teret poslodavca</th>
+        <td>@Html.DisplayFor(m => element.Doprinos_nezaposlenost_poslodavac, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Ukupan doprinos na teret poslodavca</th>
+        <td>@Html.DisplayFor(m => element.Ukupan_doprinos_poslodavac, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Ukupna vrednost svih doprinosa</th>
+        <td>@Html.DisplayFor(m => element.Ukupno_svi_doprinosi, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Ukupni troskovi poslodavca (Bruto 2)</th>
+        <td>@Html.DisplayFor(m => element.Bruto2, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+    <tr>
+        <th>Procenat dazbina neto plate (%)</th>
+        <td>@Html.DisplayFor(m => element.Procenat_dazbina_neto_plate, new { htmlAttributes = new { @class = "form-control" } })</td>
+    </tr>
+</table><br /><br />
+}
+
+
+
